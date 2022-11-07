@@ -2,6 +2,7 @@ const addBtn = document.querySelector('.add-btn')
 const delBtn = document.querySelector('.delete-btn')
 const list = document.querySelector('ol')
 const checkbox = document.querySelectorAll("li")
+const input = document.querySelector('input')
 
 cleanList = () => {
   if (list.children.length > -1) {
@@ -31,3 +32,8 @@ isChecked = (e) => {
 addBtn.addEventListener("click", addTask)
 delBtn.addEventListener("click", cleanList)
 list.addEventListener('click', isChecked)
+input.addEventListener('keypress', function(e) {
+  if(e.key === 'Enter') {
+    addTask();
+  }
+})
