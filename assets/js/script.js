@@ -29,6 +29,7 @@ isChecked = (e) => {
   }
 }
 
+// 
 addBtn.addEventListener("click", addTask)
 delBtn.addEventListener("click", cleanList)
 list.addEventListener('click', isChecked)
